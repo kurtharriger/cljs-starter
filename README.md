@@ -21,9 +21,10 @@ to do.
 
 # Usage
 
+```
 npm install
 grunt
-
+```
 
 ## License
 
