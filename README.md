@@ -12,8 +12,8 @@ provides better integration with broader web ecosystem.
 
 * Less integration for bootstrap customizations
 * Release builds
-** Replace dev bower_components with release urls
-** ClojureScript requires small but anoying changes to index.html for
+  * Replace dev bower_components with release urls
+  * ClojureScript requires small but anoying changes to index.html for
 loading cljs, probably a grunt post processing step that can do this
 kinda thing more cleanly then duplicating index.html as others appear
 to do.
