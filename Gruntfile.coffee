@@ -30,7 +30,7 @@ module.exports = (grunt) ->
           
     concurrent:
       default:
-        tasks: [ 'server', 'longrunning:cljs' ]
+        tasks: [ 'longrunning:cljs', 'server' ]
         options:
           limit: 3
           logConcurrentOutput: true
@@ -42,5 +42,5 @@ module.exports = (grunt) ->
         ]
   }
 
-  grunt.registerTask 'server', [ 'express', 'open', 'watch' ]
+  grunt.registerTask 'server', [ 'bower', 'express', 'open', 'watch' ]
   grunt.registerTask 'default', [ 'concurrent:default' ]
