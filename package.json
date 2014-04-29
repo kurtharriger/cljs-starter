@@ -2,14 +2,15 @@
   "name": "my-clojurescript-project",
   "version": "0.0.0",
   "devDependencies": {
-    "grunt": "~0.4.1",
+    "grunt": "~0.4.4",
     "grunt-contrib-watch": "~0.4.0",
     "grunt-express": "~1.2.1",
     "grunt-concurrent": "~0.4.3",
     "matchdep": "~0.1.2",
     "grunt-longrunning": "0.0.0",
     "grunt-bower-task": "~0.3.4",
-    "grunt-open": "~0.2.3"
+    "grunt-open": "~0.2.3",
+    "grunt-shell": "~0.7.0"
   },
   "engines": {
     "node": ">=0.8.0"

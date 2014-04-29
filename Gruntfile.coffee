@@ -10,6 +10,10 @@ module.exports = (grunt) ->
         options: 
           targetDir: "public/bower_components"
 
+    shell:
+      cljs:
+        command: 'lein cljsbuild once'
+
     express:
       server:
         options:
@@ -30,7 +34,7 @@ module.exports = (grunt) ->
           
     concurrent:
       default:
-        tasks: [ 'longrunning:cljs', 'server' ]
+        tasks: [ 'watch', 'longrunning:cljs']
         options:
           limit: 3
           logConcurrentOutput: true
@@ -42,5 +46,5 @@ module.exports = (grunt) ->
         ]
   }
 
-  grunt.registerTask 'server', [ 'bower', 'express', 'open', 'watch' ]
-  grunt.registerTask 'default', [ 'concurrent:default' ]
+  grunt.registerTask 'server', [ 'bower', 'shell:cljs', 'express', 'open', 'watch' ]
+  grunt.registerTask 'default', [ 'bower', 'shell:cljs', 'express', 'open', 'concurrent:default' ]
